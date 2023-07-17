@@ -5,7 +5,7 @@ const config: TypeOrmModuleOptions = {
   port: 3306,
   username: 'root',
   password: '',
-  database: 'linksDB',
+  database: 'linksdb',
   entities: ['dist/**/*.entity.js'],
   synchronize: true,
 };

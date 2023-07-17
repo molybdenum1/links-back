@@ -9,6 +9,7 @@ import {
 } from '@nestjs/common';
 import { LinkService } from './link.service';
 import { Link } from './entity/link.entity';
+import { log } from 'console';
 
 @Controller('links')
 export class LinkController {

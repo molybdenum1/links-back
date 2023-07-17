@@ -10,7 +10,7 @@ export class LinkService {
     @InjectRepository(Link) private linkRepository: Repository<Link>,
   ) {}
   async create(linkDto: CreateLinkDto): Promise<Link> {
-    const link = await this.linkRepository.create(linkDto);
+    const link = await this.linkRepository.save(linkDto);
     return link;
   }
   async getAll(): Promise<Link[]> {
