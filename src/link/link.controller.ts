@@ -19,6 +19,10 @@ export class LinkController {
   async getAll(): Promise<Link[]> {
     return this.linkService.getAll();
   }
+  @Get(':id')
+  async getOne(@Param('id') id: number): Promise<Link> {
+    return this.linkService.getOne(id);
+  }
   @Post()
   async create(@Body() link: Link): Promise<Link> {
     return this.linkService.create(link);

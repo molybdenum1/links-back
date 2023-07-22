@@ -17,6 +17,10 @@ export class LinkService {
     const links = await this.linkRepository.find();
     return links;
   }
+  async getOne(id: number): Promise<Link> {
+    const link = await this.linkRepository.findOne({ where: { id: id } });
+    return link;
+  }
   async update(id: number, link: Partial<Link>): Promise<Link> {
     await this.linkRepository.update(id, link);
     return this.linkRepository.findOne({ where: [{ id: id }] });
